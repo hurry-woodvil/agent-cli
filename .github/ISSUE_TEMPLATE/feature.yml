@@ -46,6 +46,26 @@ body:
         - レスポンス表示
 
   - type: textarea
+    id: out-of-scope
+    attributes:
+      label: スコープ外
+      description: このFeatureで扱わない範囲
+      placeholder: |
+        - 会話履歴管理
+        - Tool実行
+        - テストコード実装
+        
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完了条件
+      description: 何をもって完了とするか
+      placeholder: |
+        - CLIからLLMへ質問できる
+        - LLMの回答を標準出力できる
+        - READMEに実行手順が記載される
+
+  - type: textarea
     id: notes
     attributes:
       label: 補足
