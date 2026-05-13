@@ -1,0 +1,59 @@
+name: Task
+description: 実装タスク
+title: "[Task] "
+labels:
+  - task
+
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: 概要
+      description: 何を実装するか
+      placeholder: |
+        OpenAI APIを呼び出すLLMクライアントを実装する
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 実装内容
+      description: 実装する内容を具体的に書く
+      placeholder: |
+        - llm_client.py作成
+        - OpenAI SDK導入
+        - generate_response関数作成
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion-criteria
+    attributes:
+      label: 完了条件
+      description: 何をもって完了とするか
+      placeholder: |
+        - OpenAI APIを呼び出せる
+        - レスポンス文字列を取得できる
+        - CLIから利用できる
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: スコープ
+      description: このTaskでやらないことも含めて整理する
+      placeholder: |
+        対象:
+        - API呼び出し
+
+        対象外:
+        - Tool実行
+        - 会話履歴管理
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 技術メモ・参考資料など
