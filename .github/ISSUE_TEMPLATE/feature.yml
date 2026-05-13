@@ -1,0 +1,52 @@
+name: Feature
+description: 新機能を追加する
+title: "[Feature] "
+labels:
+  - feature
+
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: 概要
+      description: どのような機能か
+      placeholder: |
+        CLIからLLMへ質問できるようにする
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-value
+    attributes:
+      label: 誰が何をできるようになるか
+      description: ユーザー価値を書く
+      placeholder: |
+        ユーザーがCLI経由でLLMへ質問し、回答を取得できるようにする
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景・目的
+      description: なぜ必要か
+      placeholder: |
+        AIエージェントとして自然言語応答を実現するため
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: スコープ
+      description: このFeatureで扱う範囲
+      placeholder: |
+        - OpenAI API呼び出し
+        - CLIからの入力連携
+        - レスポンス表示
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 参考情報や設計メモなど
