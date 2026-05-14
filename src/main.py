@@ -1,6 +1,10 @@
 import argparse
 
 
+def add(left: int, right: int) -> int:
+    return left + right
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("left", type=int)
@@ -8,9 +12,12 @@ def main():
 
     args = parser.parse_args()
 
-    result = args.left + args.right
+    left = args.left
+    right = args.right
 
-    print(f"{args.left} + {args.right} = {result}")
+    result = add(left, right)
+
+    print(f"{left} + {right} = {result}")
 
 
 if __name__ == "__main__":
