@@ -1,5 +1,15 @@
+import argparse
+
+
 def main():
-    print("Hello World")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("left", type=int)
+    parser.add_argument("right", type=int)
+
+    args = parser.parse_args()
+
+    print(args.left)
+    print(args.right)
 
 
 if __name__ == "__main__":
