@@ -8,8 +8,9 @@ def main():
 
     args = parser.parse_args()
 
-    print(args.left)
-    print(args.right)
+    result = args.left + args.right
+
+    print(f"{args.left} + {args.right} = {result}")
 
 
 if __name__ == "__main__":
