@@ -43,12 +43,16 @@ body:
     id: scope
     attributes:
       label: スコープ
-      description: このTaskでやらないことも含めて整理する
+      description: このTaskでやることを整理する
       placeholder: |
-        対象:
         - API呼び出し
 
-        対象外:
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: スコープ外
+      description: このTaskでやらないことを整理する
+      placeholder: |
         - Tool実行
         - 会話履歴管理
 
