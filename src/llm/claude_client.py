@@ -1,5 +1,5 @@
 from anthropic import Anthropic
-from config import Settings
+from src.config import Settings
 
 
 class ClaudeLLMClient:
