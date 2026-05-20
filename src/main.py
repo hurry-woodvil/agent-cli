@@ -1,23 +1,15 @@
 import argparse
 
 
-def add(left: int, right: int) -> int:
-    return left + right
-
-
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("left", type=int)
-    parser.add_argument("right", type=int)
+    parser.add_argument("prompt", type=str)
 
     args = parser.parse_args()
 
-    left = args.left
-    right = args.right
+    prompt = args.prompt
 
-    result = add(left, right)
-
-    print(f"{left} + {right} = {result}")
+    print(f"prompt: {prompt}")
 
 
 if __name__ == "__main__":
