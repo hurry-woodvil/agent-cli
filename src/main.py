@@ -1,23 +1,23 @@
 import argparse
 
-
-def add(left: int, right: int) -> int:
-    return left + right
+from src.config import load_settings
+from src.llm.claude_client import ClaudeLLMClient
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("left", type=int)
-    parser.add_argument("right", type=int)
+    parser.add_argument("prompt", type=str)
 
     args = parser.parse_args()
 
-    left = args.left
-    right = args.right
+    prompt = args.prompt
 
-    result = add(left, right)
+    settings = load_settings()
 
-    print(f"{left} + {right} = {result}")
+    client = ClaudeLLMClient(settings)
+    response = client.generate(prompt)
+
+    print(response)
 
 
 if __name__ == "__main__":
